@@ -1,6 +1,6 @@
 # GovJobs.com — लोकसेवा बिज्ञापन (Nepal government job notices)
 
-> नेपाल लोकसेवा आयोग र सबै सरकारी कार्यालयका पछिल्ला बिज्ञापन, खरिदार, नायब सुब्बा, सुब्बा, अधिकृत पदका सूचना, लिखित/अन्तिम नतिजा तथा परीक्षा केन्द्र — कोशी, मधेश, बागमती, गण्डकी, लुम्बिनी, कर्णाली, सुदूरपश्चिम प्रदेश। Latest Nepal loksewa bigyapan, kharidar, nayab subba, subba and officer government job notices and results.
+> नेपाल लोकसेवा आयोग र सबै सरकारी कार्यालयका पछिल्ला बिज्ञापन, खरिदार, नायब सुब्बा, सुब्बा, अधिकृत र उपसचिव पदका सूचना, लिखित/अन्तिम नतिजा तथा परीक्षा केन्द्र — कोशी, मधेश, बागमती, गण्डकी, लुम्बिनी, कर्णाली, सुदूरपश्चिम प्रदेश। Latest Nepal loksewa bigyapan, kharidar, nayab subba, subba, officer and under secretary government job notices and results.
 
 GovJobs.com lists the latest Nepal loksewa (Public Service Commission) and other
 government office notices, vacancies, results and exam-center information. It is a
@@ -37,15 +37,18 @@ page, and every notice/filter is a stable URL so any single notice or subset is 
 - [सुदूरपश्चिम](/province/sudurpaschim/)
 
 ## Search shortcuts
-- [खरिदार](https://govjobscom.github.io/?q=खरिदार)
-- [नायब सुब्बा](https://govjobscom.github.io/?q=नायब सुब्बा)
-- [सुब्बा](https://govjobscom.github.io/?q=सुब्बा)
-- [अधिकृत](https://govjobscom.github.io/?q=अधिकृत)
+- [Kharidar](https://govjobscom.github.io/?q=Kharidar)
+- [Nayab Subba](https://govjobscom.github.io/?q=Nayab Subba)
+- [Subba](https://govjobscom.github.io/?q=Subba)
+- [Adhikrit](https://govjobscom.github.io/?q=Adhikrit)
+- [Upasachiv](https://govjobscom.github.io/?q=Upasachiv)
+- [Loksewa](https://govjobscom.github.io/?q=Loksewa)
+- [Bigyapan](https://govjobscom.github.io/?q=Bigyapan)
+- [Vacancy](https://govjobscom.github.io/?q=Vacancy)
 - [कृषि](https://govjobscom.github.io/?q=कृषि)
-- [loksewa](https://govjobscom.github.io/?q=loksewa)
-- [bigyapan](https://govjobscom.github.io/?q=bigyapan)
-- [कोशी](https://govjobscom.github.io/?q=कोशी)
-- [बागमती](https://govjobscom.github.io/?q=बागमती)
+- [प्रहरी](https://govjobscom.github.io/?q=प्रहरी)
+- [स्वास्थ्य](https://govjobscom.github.io/?q=स्वास्थ्य)
+- [लोकसेवा](https://govjobscom.github.io/?q=लोकसेवा)
 
 ## Current notices
 
