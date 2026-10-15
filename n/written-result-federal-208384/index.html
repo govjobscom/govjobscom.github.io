@@ -73,6 +73,11 @@
     .kw{border:1px solid var(--line);background:#f8fafc;color:#334155;font-family:inherit;font-size:12px;font-weight:700;padding:6px 12px;border-radius:999px;cursor:pointer}
     .kw:hover{border-color:var(--brand);color:var(--brand-2)}
     .topic-links{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:12px 13px;margin-bottom:12px}
+    .quick-links{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:12px 13px;margin-bottom:12px}
+    .quick-links h2{font-size:13px;color:#05080d;margin-bottom:9px}
+    .quick-links-row{display:flex;flex-wrap:wrap;gap:6px}
+    .quick-links-row a{font-size:12px;font-weight:700;color:var(--brand-2);background:#e6f4ef;padding:6px 12px;border-radius:999px;text-decoration:none}
+    .quick-links-row a:hover{background:var(--brand);color:#fff}
     .ilrow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-bottom:8px}
     .ilrow:last-child{margin-bottom:0}
     .ilrow>span{font-size:11px;font-weight:800;color:var(--muted);width:38px;flex-shrink:0}
@@ -110,7 +115,8 @@
     .type-4{background:#fef3c7;color:#b45309}
     .type-5{background:#cffafe;color:#0e7490}
     .type-6{background:#ffe4e6;color:#be123c}
-    .notice-num{margin-left:auto;font-size:11.5px;font-weight:800;background:#f8fafc;border:2px solid #05080d;color:#475569;padding:4px 10px;border-radius:8px;white-space:nowrap}
+    .notice-numwrap{margin-left:auto;display:flex}
+    .notice-num{font-size:11.5px;font-weight:800;background:#f8fafc;border:2px solid #05080d;color:#475569;padding:4px 10px;border-radius:8px;white-space:nowrap}
     .notice-title{font-size:15.5px;font-weight:700;line-height:1.4;color:#05080d;letter-spacing:.1px}
     .notice-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px dashed var(--line);padding-top:9px;margin-top:9px;flex-wrap:wrap}
     .dates{display:flex;gap:6px;flex-wrap:wrap}
@@ -184,9 +190,10 @@
       .filters{display:none}
       main{padding:10px 10px 34px}
       .notice-link{padding:9px 10px}
-      .notice-head{flex-wrap:nowrap;overflow:hidden;position:relative;min-height:26px;padding-right:2px}
-      .notice-head .badge{position:relative;z-index:2;flex:0 0 auto}
-      .notice-head .notice-num{position:absolute;right:0;top:0;margin:0;z-index:1}
+      .notice-head{flex-wrap:wrap;overflow:visible;position:static;min-height:0;padding-right:0}
+      .notice-head .badge{position:static}
+      .notice-head .notice-numwrap{flex-basis:100%;margin-left:0;margin-top:2px}
+      .notice-head .notice-num{position:static;margin:0}
     }
 </style>
 </head>
@@ -195,7 +202,7 @@
   <header class="topbar">
     <div class="topbar-inner">
       <span class="brand-mark" aria-hidden="true">🏛</span>
-      <p class="brand"><a href="/">GovJobs.com</a><span class="sr-only"> — लोकसेवा बिज्ञापन, खरिदार, नायब सुब्बा, सुब्बा, अधिकृत सूचना तथा नतिजा</span></p>
+      <p class="brand"><a href="/">GovJobs.com</a><span class="sr-only"> — लोकसेवा विज्ञापन, खरिदार, नायब सुब्बा, सुब्बा, अधिकृत सूचना तथा नतिजा</span></p>
     </div>
   </header>
 
@@ -222,8 +229,8 @@
 
   <footer>
     <nav class="foot-links" aria-label="महत्वपूर्ण लिङ्क"><a href="/about/">हाम्रोबारे</a><a href="/contact/">सम्पर्क</a><a href="/privacy/">गोपनीयता नीति</a><a href="/disclaimer/">अस्वीकरण</a><a href="/sitemap/">साइटम्याप</a></nav>
-    <nav class="foot-kw" aria-label="लोकप्रिय कीवर्ड"><a href="/?q=%E0%A4%B2%E0%A5%8B%E0%A4%95%E0%A4%B8%E0%A5%87%E0%A4%B5%E0%A4%BE">लोकसेवा</a><a href="/?q=%E0%A4%AC%E0%A4%BF%E0%A4%9C%E0%A5%8D%E0%A4%9E%E0%A4%BE%E0%A4%AA%E0%A4%A8">बिज्ञापन</a><a href="/?q=%E0%A4%B8%E0%A5%82%E0%A4%9A%E0%A4%A8%E0%A4%BE">सूचना</a><a href="/?q=%E0%A4%A8%E0%A4%A4%E0%A4%BF%E0%A4%9C%E0%A4%BE">नतिजा</a><a href="/?q=%E0%A4%96%E0%A4%B0%E0%A4%BF%E0%A4%A6%E0%A4%BE%E0%A4%B0">खरिदार</a><a href="/?q=%E0%A4%A8%E0%A4%BE%E0%A4%AF%E0%A4%AC%20%E0%A4%B8%E0%A5%81%E0%A4%AC%E0%A5%8D%E0%A4%AC%E0%A4%BE">नायब सुब्बा</a><a href="/?q=%E0%A4%B8%E0%A5%81%E0%A4%AC%E0%A5%8D%E0%A4%AC%E0%A4%BE">सुब्बा</a><a href="/?q=%E0%A4%85%E0%A4%A7%E0%A4%BF%E0%A4%95%E0%A5%83%E0%A4%A4">अधिकृत</a><a href="/?q=%E0%A4%89%E0%A4%AA%E0%A4%B8%E0%A4%9A%E0%A4%BF%E0%A4%B5">उपसचिव</a><a href="/?q=%E0%A4%95%E0%A5%83%E0%A4%B7%E0%A4%BF">कृषि</a><a href="/?q=%E0%A4%B6%E0%A4%BF%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%BE">शिक्षा</a><a href="/?q=%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A5%8D%E0%A4%AF">स्वास्थ्य</a><a href="/?q=%E0%A4%87%E0%A4%A8%E0%A5%8D%E0%A4%9C%E0%A4%BF%E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A4%B0%E0%A4%BF%E0%A4%99">इन्जिनियरिङ</a><a href="/?q=%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B9%E0%A4%B0%E0%A5%80">प्रहरी</a><a href="/province/federal/">संघीय</a><a href="/?q=%E0%A4%95%E0%A5%8B%E0%A4%B6%E0%A5%80">कोशी</a><a href="/?q=%E0%A4%AE%E0%A4%A7%E0%A5%87%E0%A4%B6">मधेश</a><a href="/?q=%E0%A4%AC%E0%A4%BE%E0%A4%97%E0%A4%AE%E0%A4%A4%E0%A5%80">बागमती</a><a href="/?q=%E0%A4%97%E0%A4%A3%E0%A5%8D%E0%A4%A1%E0%A4%95%E0%A5%80">गण्डकी</a><a href="/?q=%E0%A4%B2%E0%A5%81%E0%A4%AE%E0%A5%8D%E0%A4%AC%E0%A4%BF%E0%A4%A8%E0%A5%80">लुम्बिनी</a><a href="/?q=%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%A3%E0%A4%BE%E0%A4%B2%E0%A5%80">कर्णाली</a><a href="/?q=%E0%A4%B8%E0%A5%81%E0%A4%A6%E0%A5%82%E0%A4%B0%E0%A4%AA%E0%A4%B6%E0%A5%8D%E0%A4%9A%E0%A4%BF%E0%A4%AE">सुदूरपश्चिम</a></nav>
-    <p class="copy">© २०२६ GovJobs.com — नेपालका सबै लोकसेवा सूचना एकै ठाउँ। <time datetime="2026-10-15">अद्यावधिक २०२६-१०-१५</time></p>
+    <nav class="foot-kw" aria-label="लोकप्रिय खोज"><a href="/?q=%E0%A4%B2%E0%A5%8B%E0%A4%95%E0%A4%B8%E0%A5%87%E0%A4%B5%E0%A4%BE">लोकसेवा</a><a href="/?q=%E0%A4%AC%E0%A4%BF%E0%A4%9C%E0%A5%8D%E0%A4%9E%E0%A4%BE%E0%A4%AA%E0%A4%A8">बिज्ञापन</a><a href="/?q=%E0%A4%B8%E0%A5%82%E0%A4%9A%E0%A4%A8%E0%A4%BE">सूचना</a><a href="/?q=%E0%A4%A8%E0%A4%A4%E0%A4%BF%E0%A4%9C%E0%A4%BE">नतिजा</a><a href="/?q=%E0%A4%96%E0%A4%B0%E0%A4%BF%E0%A4%A6%E0%A4%BE%E0%A4%B0">खरिदार</a><a href="/?q=%E0%A4%A8%E0%A4%BE%E0%A4%AF%E0%A4%AC%20%E0%A4%B8%E0%A5%81%E0%A4%AC%E0%A5%8D%E0%A4%AC%E0%A4%BE">नायब सुब्बा</a><a href="/?q=%E0%A4%B8%E0%A5%81%E0%A4%AC%E0%A5%8D%E0%A4%AC%E0%A4%BE">सुब्बा</a><a href="/?q=%E0%A4%85%E0%A4%A7%E0%A4%BF%E0%A4%95%E0%A5%83%E0%A4%A4">अधिकृत</a><a href="/?q=%E0%A4%89%E0%A4%AA%E0%A4%B8%E0%A4%9A%E0%A4%BF%E0%A4%B5">उपसचिव</a><a href="/?q=%E0%A4%95%E0%A5%83%E0%A4%B7%E0%A4%BF">कृषि</a><a href="/?q=%E0%A4%B6%E0%A4%BF%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%BE">शिक्षा</a><a href="/?q=%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A5%8D%E0%A4%AF">स्वास्थ्य</a><a href="/?q=%E0%A4%87%E0%A4%A8%E0%A5%8D%E0%A4%9C%E0%A4%BF%E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A4%B0%E0%A4%BF%E0%A4%99">इन्जिनियरिङ</a><a href="/?q=%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B9%E0%A4%B0%E0%A5%80">प्रहरी</a><a href="/province/federal/">संघीय</a><a href="/?q=%E0%A4%95%E0%A5%8B%E0%A4%B6%E0%A5%80">कोशी</a><a href="/?q=%E0%A4%AE%E0%A4%A7%E0%A5%87%E0%A4%B6">मधेश</a><a href="/?q=%E0%A4%AC%E0%A4%BE%E0%A4%97%E0%A4%AE%E0%A4%A4%E0%A5%80">बागमती</a><a href="/?q=%E0%A4%97%E0%A4%A3%E0%A5%8D%E0%A4%A1%E0%A4%95%E0%A5%80">गण्डकी</a><a href="/?q=%E0%A4%B2%E0%A5%81%E0%A4%AE%E0%A5%8D%E0%A4%AC%E0%A4%BF%E0%A4%A8%E0%A5%80">लुम्बिनी</a><a href="/?q=%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%A3%E0%A4%BE%E0%A4%B2%E0%A5%80">कर्णाली</a><a href="/?q=%E0%A4%B8%E0%A5%81%E0%A4%A6%E0%A5%82%E0%A4%B0%E0%A4%AA%E0%A4%B6%E0%A5%8D%E0%A4%9A%E0%A4%BF%E0%A4%AE">सुदूरपश्चिम</a></nav>
+    <p class="copy">© 2026 GovJobs.com — नेपालका सबै लोकसेवा सूचना एकै ठाउँ। <time datetime="2026-10-15">अद्यावधिक २०२६-१०-१५</time></p>
   </footer>
 
   <script>
