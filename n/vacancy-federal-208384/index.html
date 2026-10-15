@@ -83,13 +83,16 @@
     .ilrow>span{font-size:11px;font-weight:800;color:var(--muted);width:38px;flex-shrink:0}
     .ilink{font-size:12px;font-weight:700;color:var(--brand-2);background:#e6f4ef;padding:5px 11px;border-radius:999px;text-decoration:none}
     .ilink:hover{background:var(--brand);color:#fff}
-    .filters{display:grid;gap:8px;margin-bottom:14px}
+    .filters{display:grid;gap:8px;margin:2px 0 14px}
     .filter-row{display:flex;align-items:center;gap:8px}
     .filter-label{font-size:11px;font-weight:800;color:var(--muted);flex-shrink:0;letter-spacing:.3px;width:34px}
     .filter-chips{display:flex;gap:6px;overflow-x:auto;padding:2px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
     .filter-chips::-webkit-scrollbar{display:none}
-    .fchip{flex-shrink:0;border:1px solid var(--line);background:var(--card);color:#475569;font-family:inherit;font-size:12.5px;font-weight:700;padding:6px 13px;border-radius:999px;cursor:pointer;white-space:nowrap;transition:background .15s,color .15s}
-    .fchip.active{background:var(--brand);color:#fff;border-color:var(--brand);box-shadow:0 4px 12px rgba(11,110,79,.28)}
+    .fchip{flex-shrink:0;border:2px solid #05080d;background:var(--card);color:#334155;font-family:inherit;font-size:12.5px;font-weight:700;padding:5px 13px;border-radius:999px;cursor:pointer;white-space:nowrap;transition:background .15s,color .15s,box-shadow .15s}
+    .fchip:hover{background:#f1f5f9;color:var(--brand-2)}
+    .fchip.active{background:var(--brand);color:#fff;box-shadow:0 3px 0 rgba(5,8,13,.35)}
+    .filter-select{display:none;flex:1 1 auto;min-width:0;font-family:inherit;font-size:13px;font-weight:700;color:#1e293b;background:#f8fafc;border:2px solid #05080d;border-radius:11px;padding:8px 34px 8px 12px;cursor:pointer;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2305080d' stroke-width='3'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center}
+    .filter-select:focus{outline:none;box-shadow:0 0 0 3px rgba(11,110,79,.18)}
     .list-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:12px;gap:10px}
     .list-head h2{font-size:15.5px;font-weight:800}
     .list-head .count{font-size:12px;color:var(--brand-2);background:#e6f4ef;padding:4px 11px;border-radius:999px;white-space:nowrap;font-weight:700}
@@ -187,7 +190,11 @@
     .btn:hover{background:var(--brand-2)}
     .rel-h{font-size:15px;margin:18px 0 8px;color:#05080d}
     @media (max-width:640px){
-      .filters{display:none}
+      .filters{display:grid;gap:8px}
+      .filter-label{width:auto;min-width:34px}
+      .filter-row--prov .filter-chips{display:none}
+      .filter-row--prov .filter-select{display:block}
+      .filter-row--ty .filter-chips{mask-image:linear-gradient(90deg,#000 90%,transparent);-webkit-mask-image:linear-gradient(90deg,#000 90%,transparent)}
       main{padding:10px 10px 34px}
       .notice-link{padding:9px 10px}
       .notice-head{flex-wrap:wrap;overflow:visible;position:static;min-height:0;padding-right:0}
@@ -235,7 +242,7 @@
       </article>
       <article class="notice type-1" id="notice-3" data-s="पाँचौ तह (बढुवा, खुला, आन्तरिक) बिज्ञापन vacancy कर्णाली अप्राविधिक/प्राविधिक karnali 2083/84 २०८३ असोज २७ २०८३ कार्तिक १६ bigyapan vigyapan vacancy" data-ty="बिज्ञापन" data-prov="कर्णाली" data-pd="२०८३ असोज २७" data-dl="२०८३ कार्तिक १६">
         <a class="notice-link" href="https://giwmscdnone.gov.np/media/pdf_upload/%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A4%BE%E0%A4%A8%E0%A5%80%E0%A4%AF%20%E0%A4%B8%E0%A5%87%E0%A4%B5%E0%A4%BE%E0%A4%95%E0%A5%8B%20%E0%A4%AA%E0%A4%BE%E0%A4%81%E0%A4%9A%E0%A5%8C%E0%A4%82%20%E0%A4%A4%E0%A4%B9%E0%A4%95%E0%A5%8B%20%E0%A4%B5%E0%A4%BF%E0%A4%9C%E0%A5%8D%E0%A4%9E%E0%A4%BE%E0%A4%AA%E0%A4%A8%20%E0%A4%B8%E0%A4%AE%E0%A5%8D%E0%A4%AC%E0%A4%A8%E0%A5%8D%E0%A4%A7%E0%A5%80%20%E0%A4%B8%E0%A5%82%E0%A4%9A%E0%A4%A8%E0%A4%BE%202083%20%E0%A4%B5%E0%A4%BF%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%83%E0%A4%A4%20%E0%A4%B5%E0%A4%BF%E0%A4%9C%E0%A5%8D%E0%A4%9E%E0%A4%BE%E0%A4%AA%E0%A4%A8_oslgxbk.pdf" target="_blank" rel="noopener nofollow">
-          <div class="notice-head"><span class="badge type-1">बिज्ञापन</span><span class="badge" style="background:#fee2e2;color:#b91c1c">कर्णाली</span><span class="badge" style="background:#e6f4ef;color:#08563d">अप्राविधिक/प्राविधिक</span><span class="notice-numwrap"><span class="notice-num">बिज्ञापन नं. २०८३/८४</span></span></div>
+          <div class="notice-head"><span class="badge type-1">बिज्ञापन</span><span class="badge" style="background:#fee2e2;color:#b91c1c">कर्णाली</span><span class="badge" style="background:#e6f4ef;color:#08563d">अप्राविधिक/प्राविधिक</span><span class="notice-numwrap"><span class="notice-num">२०८३/८४</span></span></div>
           <h3 class="notice-title">पाँचौ तह (बढुवा, खुला, आन्तरिक)</h3>
           <div class="notice-foot"><div class="dates"><span class="date-badge date-pd">बिज्ञापन मिति: २०८३ असोज २७</span><span class="date-badge date-dl">अन्तिम म्याद: २०८३ कार्तिक १६</span></div></div>
         </a>
@@ -280,9 +287,11 @@
       }
       function setChips(group,val){
         var box=document.querySelector('.filter-chips[data-group="'+group+'"]');
-        if(!box)return;
-        Array.prototype.forEach.call(box.querySelectorAll('.fchip'),function(x){x.className='fchip'+(x.getAttribute('data-val')===val?' active':'');});
+        if(box)Array.prototype.forEach.call(box.querySelectorAll('.fchip'),function(x){x.className='fchip'+(x.getAttribute('data-val')===val?' active':'');});
+        var sel=document.querySelector('.filter-select[data-group="'+group+'"]');
+        if(sel)sel.value=val;
       }
+      function setGroup(group,val){state[group]=val;setChips(group,val);apply();sync();}
       input.addEventListener('input',function(){apply();sync();});
       clearBtn.addEventListener('click',function(){input.value='';state.ty='';state.prov='';setChips('ty','');setChips('prov','');apply();sync();input.focus();});
       /* One delegated listener beats a handler on every chip — new chips need no rebinding. */
@@ -290,12 +299,15 @@
         var b=e.target.closest&&e.target.closest('.fchip');
         if(b){
           var box=b.parentNode,group=box.getAttribute('data-group');
-          state[group]=b.getAttribute('data-val');
-          Array.prototype.forEach.call(box.querySelectorAll('.fchip'),function(x){x.className='fchip'+(x===b?' active':'');});
-          apply();sync();return;
+          setGroup(group,b.getAttribute('data-val'));return;
         }
         var k=e.target.closest&&e.target.closest('.kw');
         if(k){input.value=k.getAttribute('data-kw')||'';apply();sync();window.scrollTo({top:0,behavior:'smooth'});}
+      });
+      /* Mobile dropdown = same filter as its chip row (change updates both). */
+      document.addEventListener('change',function(e){
+        var s=e.target.closest&&e.target.closest('.filter-select');
+        if(s){state[s.getAttribute('data-group')]=s.value;setChips(s.getAttribute('data-group'),s.value);apply();sync();}
       });
       var sc=document.getElementById('stickyClose');
       if(sc)sc.addEventListener('click',function(){document.getElementById('stickyAd').style.display='none';document.body.classList.remove('has-sticky');});

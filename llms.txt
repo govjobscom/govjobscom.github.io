@@ -25,7 +25,7 @@ page, and every notice/filter is a stable URL so any single notice or subset is 
 - [परीक्षा केन्द्र](/type/exam-center/)
 - [सूचना](/type/notice/)
 - [अन्य](/type/other/)
-- [अप्राविधिक/प्राविधिक](/type/cat/)
+- [सिफारिस](/type/cat/)
 
 ## By province
 - [संघीय](/province/federal/)
