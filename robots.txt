@@ -14,4 +14,4 @@ User-agent: PerplexityBot
 Allow: /
 User-agent: Google-Extended
 Allow: /
-Sitemap: https://govjobs.com/sitemap.xml
+Sitemap: https://govjobscom.github.io/sitemap.xml
