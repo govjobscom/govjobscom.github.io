@@ -86,7 +86,7 @@
     .filters{display:grid;gap:8px;margin:2px 0 14px}
     .filter-row{display:flex;align-items:center;gap:8px}
     .filter-label{font-size:11px;font-weight:800;color:var(--muted);flex-shrink:0;letter-spacing:.3px;width:34px}
-    .filter-chips{display:flex;gap:6px;overflow-x:auto;padding:2px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+    .filter-chips{display:flex;flex:1 1 auto;min-width:0;gap:6px;overflow-x:auto;padding:2px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
     .filter-chips::-webkit-scrollbar{display:none}
     .fchip{flex-shrink:0;border:2px solid #05080d;background:var(--card);color:#334155;font-family:inherit;font-size:12.5px;font-weight:700;padding:5px 13px;border-radius:999px;cursor:pointer;white-space:nowrap;transition:background .15s,color .15s,box-shadow .15s}
     .fchip:hover{background:#f1f5f9;color:var(--brand-2)}
@@ -191,7 +191,9 @@
     .rel-h{font-size:15px;margin:18px 0 8px;color:#05080d}
     @media (max-width:640px){
       .filters{display:grid;gap:8px}
-      .filter-label{width:auto;min-width:34px}
+      .filter-row{gap:0}
+      .filter-label{display:none}
+      .filter-row--ty .fchip[data-val=""]{display:none}
       .filter-row--prov .filter-chips{display:none}
       .filter-row--prov .filter-select{display:block}
       .filter-row--ty .filter-chips{mask-image:linear-gradient(90deg,#000 90%,transparent);-webkit-mask-image:linear-gradient(90deg,#000 90%,transparent)}
@@ -227,7 +229,7 @@
     <nav class="crumbs" aria-label="breadcrumb"><a href="/">गृहपृष्ठ</a> › <span>साइटम्याप</span></nav>
     <h1 class="page-title">साइटम्याप</h1>
     <p class="page-intro">GovJobs.com का सबै पृष्ठ, श्रेणी, प्रदेश र सूचनाको सूची एकै ठाउँमा।</p>
-    <section class="prose"><div class="sitemap-grid"><h2>मुख्य</h2><ul><li><a href="/">गृहपृष्ठ</a></li><li><a href="/feed.xml">RSS फिड</a></li><li><a href="/sitemap.xml">XML साइटम्याप</a></li></ul><h2>प्रकार अनुसार</h2><ul><li><a href="/type/vacancy/">बिज्ञापन</a></li><li><a href="/type/written-result/">लिखित नतिजा</a></li><li><a href="/type/final-result/">अन्तिम नतिजा</a></li><li><a href="/type/exam-center/">परीक्षा केन्द्र</a></li><li><a href="/type/notice/">सूचना</a></li><li><a href="/type/other/">अन्य</a></li><li><a href="/type/cat/">सिफारिस</a></li></ul><h2>प्रदेश अनुसार</h2><ul><li><a href="/province/federal/">संघीय प्रदेश</a></li><li><a href="/province/koshi/">कोशी प्रदेश</a></li><li><a href="/province/madhesh/">मधेश प्रदेश</a></li><li><a href="/province/bagmati/">बागमती प्रदेश</a></li><li><a href="/province/gandaki/">गण्डकी प्रदेश</a></li><li><a href="/province/lumbini/">लुम्बिनी प्रदेश</a></li><li><a href="/province/karnali/">कर्णाली प्रदेश</a></li><li><a href="/province/sudurpaschim/">सुदूरपश्चिम प्रदेश</a></li></ul><h2>सबै सूचना (३)</h2><ul><li><a href="/n/written-result-federal-208384/">धनकुटा, शिक्षा सेवा, शिक्षा प्रशासन समुह, निरिक्षण उपसमुह, रा.प.अनं. प्रथम श्रेणी (नायब सुब्बा सरह)</a></li><li><a href="/n/vacancy-federal-208384/">उपसचिव सबै, स्वास्थ्य नवौं र मानवअधिकार अधिकृत द्वितिय श्रेणी (आप्र, खुला)</a></li><li><a href="/n/vacancy-karnali-208384/">पाँचौ तह (बढुवा, खुला, आन्तरिक)</a></li></ul><h2>जानकारी</h2><ul><li><a href="/about/">हाम्रोबारे</a></li><li><a href="/contact/">सम्पर्क</a></li><li><a href="/privacy/">गोपनीयता नीति</a></li><li><a href="/disclaimer/">अस्वीकरण</a></li></ul></div></section>
+    <section class="prose"><div class="sitemap-grid"><h2>मुख्य</h2><ul><li><a href="/">गृहपृष्ठ</a></li><li><a href="/feed.xml">RSS फिड</a></li><li><a href="/sitemap.xml">XML साइटम्याप</a></li></ul><h2>प्रकार अनुसार</h2><ul><li><a href="/type/vacancy/">बिज्ञापन</a></li><li><a href="/type/written-result/">लिखित नतिजा</a></li><li><a href="/type/final-result/">अन्तिम नतिजा</a></li><li><a href="/type/exam-center/">परीक्षा केन्द्र</a></li><li><a href="/type/notice/">सूचना</a></li><li><a href="/type/other/">अन्य</a></li><li><a href="/type/cat/">सिफारिस</a></li></ul><h2>प्रदेश अनुसार</h2><ul><li><a href="/province/federal/">संघीय प्रदेश</a></li><li><a href="/province/koshi/">कोशी प्रदेश</a></li><li><a href="/province/madhesh/">मधेश प्रदेश</a></li><li><a href="/province/bagmati/">बागमती प्रदेश</a></li><li><a href="/province/gandaki/">गण्डकी प्रदेश</a></li><li><a href="/province/lumbini/">लुम्बिनी प्रदेश</a></li><li><a href="/province/karnali/">कर्णाली प्रदेश</a></li><li><a href="/province/sudurpaschim/">सुदूरपश्चिम प्रदेश</a></li></ul><h2>सबै सूचना (३)</h2><ul><li><a href="/n/written-result-federal-208384/">धनकुटा, शिक्षा सेवा, शिक्षा प्रशासन समुह, निरिक्षण उपसमुह, रा.प.अनं. प्रथम श्रेणी (नायब सुब्बा सरह)</a></li><li><a href="/n/vacancy-federal-208384/">उपसचिव सबै, स्वास्थ्य नवौं र मानवअधिकार अधिकृत द्वितिय श्रेणी (आप्र, खुला)</a></li><li><a href="/n/vacancy-karnali-208384/">कर्णाली पाँचौ तह (बढुवा, खुला, आन्तरिक)</a></li></ul><h2>जानकारी</h2><ul><li><a href="/about/">हाम्रोबारे</a></li><li><a href="/contact/">सम्पर्क</a></li><li><a href="/privacy/">गोपनीयता नीति</a></li><li><a href="/disclaimer/">अस्वीकरण</a></li></ul></div></section>
   </main>
 
   <footer>

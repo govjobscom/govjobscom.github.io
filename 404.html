@@ -86,7 +86,7 @@
     .filters{display:grid;gap:8px;margin:2px 0 14px}
     .filter-row{display:flex;align-items:center;gap:8px}
     .filter-label{font-size:11px;font-weight:800;color:var(--muted);flex-shrink:0;letter-spacing:.3px;width:34px}
-    .filter-chips{display:flex;gap:6px;overflow-x:auto;padding:2px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+    .filter-chips{display:flex;flex:1 1 auto;min-width:0;gap:6px;overflow-x:auto;padding:2px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
     .filter-chips::-webkit-scrollbar{display:none}
     .fchip{flex-shrink:0;border:2px solid #05080d;background:var(--card);color:#334155;font-family:inherit;font-size:12.5px;font-weight:700;padding:5px 13px;border-radius:999px;cursor:pointer;white-space:nowrap;transition:background .15s,color .15s,box-shadow .15s}
     .fchip:hover{background:#f1f5f9;color:var(--brand-2)}
@@ -191,7 +191,9 @@
     .rel-h{font-size:15px;margin:18px 0 8px;color:#05080d}
     @media (max-width:640px){
       .filters{display:grid;gap:8px}
-      .filter-label{width:auto;min-width:34px}
+      .filter-row{gap:0}
+      .filter-label{display:none}
+      .filter-row--ty .fchip[data-val=""]{display:none}
       .filter-row--prov .filter-chips{display:none}
       .filter-row--prov .filter-select{display:block}
       .filter-row--ty .filter-chips{mask-image:linear-gradient(90deg,#000 90%,transparent);-webkit-mask-image:linear-gradient(90deg,#000 90%,transparent)}
@@ -230,7 +232,7 @@
 <form class="notfound-search" action="/" method="get" role="search"><input type="search" name="q" placeholder="सूचना खोज्नुहोस्…" aria-label="सूचना खोज्नुहोस्"><button class="btn" type="submit">खोज्नुहोस्</button></form>
 <p><a href="/">गृहपृष्ठमा फर्कनुहोस्</a> · <a href="/sitemap/">साइटम्याप</a></p>
 </section>
-    <section class="prose"><h2>पछिल्ला सूचना</h2><ul class="sitemap-grid" style="list-style:none"><li><a href="/n/written-result-federal-208384/">धनकुटा, शिक्षा सेवा, शिक्षा प्रशासन समुह, निरिक्षण उपसमुह, रा.प.अनं. प्रथम श्रेणी (नायब सुब्बा सरह)</a></li><li><a href="/n/vacancy-federal-208384/">उपसचिव सबै, स्वास्थ्य नवौं र मानवअधिकार अधिकृत द्वितिय श्रेणी (आप्र, खुला)</a></li><li><a href="/n/vacancy-karnali-208384/">पाँचौ तह (बढुवा, खुला, आन्तरिक)</a></li></ul></section>
+    <section class="prose"><h2>पछिल्ला सूचना</h2><ul class="sitemap-grid" style="list-style:none"><li><a href="/n/written-result-federal-208384/">धनकुटा, शिक्षा सेवा, शिक्षा प्रशासन समुह, निरिक्षण उपसमुह, रा.प.अनं. प्रथम श्रेणी (नायब सुब्बा सरह)</a></li><li><a href="/n/vacancy-federal-208384/">उपसचिव सबै, स्वास्थ्य नवौं र मानवअधिकार अधिकृत द्वितिय श्रेणी (आप्र, खुला)</a></li><li><a href="/n/vacancy-karnali-208384/">कर्णाली पाँचौ तह (बढुवा, खुला, आन्तरिक)</a></li></ul></section>
   </main>
 
   <footer>

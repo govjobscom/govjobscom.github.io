@@ -86,7 +86,7 @@
     .filters{display:grid;gap:8px;margin:2px 0 14px}
     .filter-row{display:flex;align-items:center;gap:8px}
     .filter-label{font-size:11px;font-weight:800;color:var(--muted);flex-shrink:0;letter-spacing:.3px;width:34px}
-    .filter-chips{display:flex;gap:6px;overflow-x:auto;padding:2px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+    .filter-chips{display:flex;flex:1 1 auto;min-width:0;gap:6px;overflow-x:auto;padding:2px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
     .filter-chips::-webkit-scrollbar{display:none}
     .fchip{flex-shrink:0;border:2px solid #05080d;background:var(--card);color:#334155;font-family:inherit;font-size:12.5px;font-weight:700;padding:5px 13px;border-radius:999px;cursor:pointer;white-space:nowrap;transition:background .15s,color .15s,box-shadow .15s}
     .fchip:hover{background:#f1f5f9;color:var(--brand-2)}
@@ -191,7 +191,9 @@
     .rel-h{font-size:15px;margin:18px 0 8px;color:#05080d}
     @media (max-width:640px){
       .filters{display:grid;gap:8px}
-      .filter-label{width:auto;min-width:34px}
+      .filter-row{gap:0}
+      .filter-label{display:none}
+      .filter-row--ty .fchip[data-val=""]{display:none}
       .filter-row--prov .filter-chips{display:none}
       .filter-row--prov .filter-select{display:block}
       .filter-row--ty .filter-chips{mask-image:linear-gradient(90deg,#000 90%,transparent);-webkit-mask-image:linear-gradient(90deg,#000 90%,transparent)}
@@ -240,10 +242,10 @@
           <div class="notice-foot"><div class="dates"><span class="date-badge date-pd">लिखित परीक्षा मिति: २०८३ असार १०</span></div></div>
         </a>
       </article>
-      <article class="notice type-1" id="notice-3" data-s="पाँचौ तह (बढुवा, खुला, आन्तरिक) बिज्ञापन vacancy कर्णाली अप्राविधिक/प्राविधिक karnali 2083/84 २०८३ असोज २७ २०८३ कार्तिक १६ bigyapan vigyapan vacancy" data-ty="बिज्ञापन" data-prov="कर्णाली" data-pd="२०८३ असोज २७" data-dl="२०८३ कार्तिक १६">
+      <article class="notice type-1" id="notice-3" data-s="कर्णाली पाँचौ तह (बढुवा, खुला, आन्तरिक) बिज्ञापन vacancy कर्णाली अप्राविधिक/प्राविधिक karnali 2083/84 २०८३ असोज २७ २०८३ कार्तिक १६ bigyapan vigyapan vacancy" data-ty="बिज्ञापन" data-prov="कर्णाली" data-pd="२०८३ असोज २७" data-dl="२०८३ कार्तिक १६">
         <a class="notice-link" href="https://giwmscdnone.gov.np/media/pdf_upload/%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A4%BE%E0%A4%A8%E0%A5%80%E0%A4%AF%20%E0%A4%B8%E0%A5%87%E0%A4%B5%E0%A4%BE%E0%A4%95%E0%A5%8B%20%E0%A4%AA%E0%A4%BE%E0%A4%81%E0%A4%9A%E0%A5%8C%E0%A4%82%20%E0%A4%A4%E0%A4%B9%E0%A4%95%E0%A5%8B%20%E0%A4%B5%E0%A4%BF%E0%A4%9C%E0%A5%8D%E0%A4%9E%E0%A4%BE%E0%A4%AA%E0%A4%A8%20%E0%A4%B8%E0%A4%AE%E0%A5%8D%E0%A4%AC%E0%A4%A8%E0%A5%8D%E0%A4%A7%E0%A5%80%20%E0%A4%B8%E0%A5%82%E0%A4%9A%E0%A4%A8%E0%A4%BE%202083%20%E0%A4%B5%E0%A4%BF%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%83%E0%A4%A4%20%E0%A4%B5%E0%A4%BF%E0%A4%9C%E0%A5%8D%E0%A4%9E%E0%A4%BE%E0%A4%AA%E0%A4%A8_oslgxbk.pdf" target="_blank" rel="noopener nofollow">
           <div class="notice-head"><span class="badge type-1">बिज्ञापन</span><span class="badge" style="background:#fee2e2;color:#b91c1c">कर्णाली</span><span class="badge" style="background:#e6f4ef;color:#08563d">अप्राविधिक/प्राविधिक</span><span class="notice-numwrap"><span class="notice-num">२०८३/८४</span></span></div>
-          <h3 class="notice-title">पाँचौ तह (बढुवा, खुला, आन्तरिक)</h3>
+          <h3 class="notice-title">कर्णाली पाँचौ तह (बढुवा, खुला, आन्तरिक)</h3>
           <div class="notice-foot"><div class="dates"><span class="date-badge date-pd">बिज्ञापन मिति: २०८३ असोज २७</span><span class="date-badge date-dl">अन्तिम म्याद: २०८३ कार्तिक १६</span></div></div>
         </a>
       </article>
